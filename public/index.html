@@ -39,5 +39,17 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script>
+    <script>
+      var elem = document.querySelector('.grid-container');
+      imagesLoaded( elem, () => {
+        var msnry = new Masonry( elem, {
+          // options
+          itemSelector: '.grid-item',
+          columnWidth: 250
+        });
+      } )
+    </script>
   </body>
 </html>
